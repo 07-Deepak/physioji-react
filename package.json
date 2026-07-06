@@ -1,0 +1,22 @@
+{
+  "name": "physioji-app",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "npx concurrently \"npm run dev --workspace server\" \"npm run dev --workspace client\"",
+    "build": "npm --workspace client run build",
+    "start": "npm --workspace server run start"
+  },
+  "devDependencies": {
+    "babel-jest": "^29.7.0",
+    "concurrently": "^8.2.2",
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "mongodb": "^7.4.0"
+  }
+}
